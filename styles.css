@@ -1,0 +1,33 @@
+img{
+    width: 200px;
+}
+body {
+    font-family: 'Arima', cursive;
+    text-align: center;
+    
+}
+div {
+    padding: 1.0rem;
+}
+#searchContainer {
+    display: flex;
+    /* padding: 0 10.0rem 0 10.0rem; */
+    justify-content: center;
+    background-color: pink;
+    border: 1.0rem solid black;
+    width: 60.0rem;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+#container {
+    display: flex;
+}
+#pokeInfo {
+    float: left;
+}
+#ability {
+    position: relative;
+    left: 20.0rem;
+    top: -10.0rem;
+    font-size: 2.0rem;
+}
