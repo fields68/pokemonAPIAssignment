@@ -4,6 +4,7 @@ const containerDiv = document.getElementById('container');
 let pokeName = null;
 let pokeNum = null;
 let pokeDiv = null;
+let abilityDiv = null;
 let pokeAbilityName = null;
 let pokeAbility = "";
 let pokeAbilityArray = [];
@@ -111,6 +112,7 @@ const makePokeDiv = (image, name, divForInfo) => {
     // console.log("this function makePokeDiv works")
     //* Initializing and assigning  new variables with their values
     pokeDiv = document.createElement('div')
+    abilityDiv = document.createElement('div')
     
     const pokePic = document.createElement('img')
     const pokeName = document.createElement('h1')
@@ -123,6 +125,7 @@ const makePokeDiv = (image, name, divForInfo) => {
     pokeAbility.setAttribute("id", "pokeAbilityBtn")//! assigns id to the new button
     pokeAbility.onClick = viewAbilities //! creates a function to be triggeres when button is clicked
     pokeDiv.setAttribute("id", "pokeInfo")
+    abilityDiv.setAttribute("id", "pokeAbility")
 
     //* adds all the elements to the created pokeDiv
     pokeDiv.appendChild(pokePic)
@@ -133,6 +136,7 @@ const makePokeDiv = (image, name, divForInfo) => {
 
 
     divForInfo.appendChild(pokeDiv)
+    pokeDiv.appendChild(abilityDiv)
     
     
 }
@@ -145,37 +149,56 @@ const viewAbilities = () => {
     //* if else statement to lead the code to the proper fetch statement 
     //! i.e. if user searched by name function nameAbilities will be triggered. If user generated a number function numAbilities will be triggered
     if (pokeName === null) {
+        abilityDiv = document.createElement('div')
+        pokeDiv.appendChild(abilityDiv)
         numAbilities()
 
     } 
     else {
+        abilityDiv = document.createElement('div')
+        pokeDiv.appendChild(abilityDiv)
         nameAbilities()
 }
 
 }
 const hideAbilities = () => {
-    const abilities = document.getElementById('ability')
+    // const abilities = document.getElementById('ability')
     console.log("hideAbilities work")    
     console.log(`numOfAbilities = ${numOfAbilities}`);
-    for (i = 1; i <= numOfAbilities; i++){
-        console.log(i);
+
+    // let aDiv = document.getElementById('pokeAbility');
+    // let delADiv = document.getElementsByClassName('ability');
+    // aDiv.removeChild(delADiv);
+
+    pokeDiv.firstElementChild != null
+    // if true
+    ? pokeDiv.removeChild(abilityDiv)
+    // if false
+        : null
+    
+    pokeAbility.innerHTML = 'Show Abilities';
+    pokeAbility.onclick = viewAbilities;
+
+
+    // for (i = 1; i <= numOfAbilities; i++){
+    //     console.log(i);
         // if (i < numOfAbilities) {
         //     abilities.remove();            
         // } else {console.log('numOfAbilities loop is done');}
-        switch (`${i}`) {
-            case "1":
-                abilities.remove();
-                break;
-            case "2":
-                abilities.remove();
-                break;
-            case "3":
-                abilities.remove();
-                break;
-            default:
-                console.log('numOfAbilities loop is done');
-        }
-    }
+    //     switch (`${i}`) {
+    //         case "1":
+    //             abilities.remove();
+    //             break;
+    //         case "2":
+    //             abilities.remove();
+    //             break;
+    //         case "3":
+    //             abilities.remove();
+    //             break;
+    //         default:
+    //             console.log('numOfAbilities loop is done');
+    //     }
+    // }
 
 }
 //* function to display the abilities of pokemon that was randomly generated
@@ -193,8 +216,8 @@ const numAbilities = () => {
         for (i = 0; i < numOfAbilities; i++){
             console.log(data.abilities[i].ability.name);
 
-            pokeAbilityArray.push(data.abilities[i].ability.name);
-            makePokeAbilityDiv(data.abilities[i].ability.name, pokeDiv)
+            // pokeAbilityArray.push(data.abilities[i].ability.name);
+            makePokeAbilityDiv(data.abilities[i].ability.name, abilityDiv)
         }
 
         console.log(pokeAbilityArray);
@@ -215,7 +238,7 @@ const nameAbilities = () => {
 
         for (i = 0; i < numOfAbilities; i++){
             console.log(data.abilities[i].ability.name);
-            makePokeAbilityDiv(data.abilities[i].ability.name, pokeDiv)
+            makePokeAbilityDiv(data.abilities[i].ability.name, abilityDiv)
         }
         
         
