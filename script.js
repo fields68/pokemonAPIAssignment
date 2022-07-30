@@ -19,19 +19,19 @@ let cssType2 = "";
 const searchDiv = document.getElementById('searchContainer');
 const pAudio = document.getElementById('pokeAudio')
 
-pAudio.volume = 0.1;
+pAudio.volume = 0.2;
 
 mute = () => {
     console.log("mute button works");
     pAudio.volume = 0;
-    muteControl.value = 'Unmute 🔊';
+    muteControl.value = 'Music Unmute 🔊';
     muteControl.onclick = unmute;
 }
 
 unmute = () => {
     console.log("mute button works");
-    pAudio.volume = 0.1;
-    muteControl.value = 'Mute 🔇';
+    pAudio.volume = 0.2;
+    muteControl.value = 'Music Mute 🔇';
     muteControl.onclick = mute;
 }
 
@@ -45,6 +45,7 @@ function lowCaseSearch(string) {
 }
 //* Function triggered when user hits the search button on the HTML
 const getPokeResults = () => {
+    pAudio.play();
     
     const searchInput = document.getElementById("search");
     //* Triggers function "mkString" and assigns "name" a value
@@ -126,6 +127,7 @@ const getPokeResults = () => {
 }
 //* Function triggered when user clicks the Random pokemon button
 const getRandomPokemon = () => {
+    pAudio.play();
     // console.log("this random button works")
     pokeNum = Math.floor(Math.random() * 905) + 1
     // console.log(pokeNum)
