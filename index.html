@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arima:wght@400;700&display=swap" rel="stylesheet">
 
-    <title>Pokemon</title>
+    <title>Pokémon</title>
 
     <link rel="icon" href="./assets/pokeball.ico">
 
@@ -17,21 +17,18 @@
 </head>
 
 <body>
-    <audio id="pokeAudio">
+    <audio loop id="pokeAudio">
         <source src="./assets/LakePokémonDiamondPearl.mp3">
     </audio>
-    <!-- <audio autoplay loop controls>
-        <source src="./assets/LakePokémonDiamondPearl.mp3" type="audio/mp3">
-    </audio> -->
     <input id="muteControl" class="button" onclick="mute()" type="button" value="Music Mute 🔇">
     <div id="titleSearch">
-        <h1>Pokemon!</h1>
-        <h2>Search Pokemon!</h2>
+        <h1>Pokémon!</h1>
+        <h2>Search Pokémon!</h2>
         <form>
-            <label for="search">Search Pokemon here:</label>
-            <input type="text" name="search" id="search" placeholder="Pokemon Name or ID">
+            <label for="search">Search Pokémon here:</label>
+            <input type="text" name="search" id="search" placeholder="Pokémon Name or ID">
             <input onclick="getPokeResults()" type="button" value="🔎Search🔎" class="button">
-            <input onclick="getRandomPokemon()" type="button" value="✨Random Pokemon✨" class="button">
+            <input onclick="getRandomPokemon()" type="button" value="✨Random Pokémon✨" class="button">
     </div>
     </form>
     <div id="searchContainer"></div>
