@@ -1,23 +1,24 @@
 img{
-    width: 200px;
+    width: 20rem;
 }
 body {
     font-family: 'Arima', cursive;
-    text-align: center;
-    justify-content: center;
+    background-image: url(./assets/pokemonPixelBackground.png);
+    /* text-align: center;
+    justify-content: center; */
 }
 div {
     padding: 1.0rem;
 }
-#searchContainer {
+/* #searchContainer {
     display: flex;
-    /* padding: 0 10.0rem 0 10.0rem; */
+    padding: 0 10.0rem 0 10.0rem;
     justify-content: center;
     background-color: pink;
     border: 1.0rem solid black;
     width: 60%;
-    /* margin-left: auto;
-    margin-right: auto; */
+    margin-left: auto;
+    margin-right: auto;
     margin: auto;
     padding: 10px;
 }
@@ -32,4 +33,182 @@ div {
     padding: 10px;
 }
 #ability {
+} */
+
+#titleSearch {   
+    text-align: center;
+}
+#pokePicName { grid-area: picName; }
+#pokeInfo { grid-area: info; }
+#abilityBtn { grid-area: abilityBtn; }
+#pokeAbility { grid-area: abilityNames; }
+
+#searchContainer {
+    display: grid;
+    border-radius: 50px;
+    border: 10px double black;
+    grid-template-areas:
+        'picName picName info info abilityBtn abilityBtn abilityBtn abilityBtn'
+        'picName picName info info abilityNames abilityNames abilityNames abilityNames';
+    gap: 10px;
+    /* background-color: #2196F3; */
+    padding: 10px;
+}
+
+#searchContainer > div {
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    border-radius: 50px;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    border: 10px double black;
+}
+
+
+.hide {
+    display: none;
+}
+
+.normal {
+    background: #BABAAE;
+}
+
+.fighting {
+    background: #A75543;
+}
+
+.flying {
+    background: #78A2FF;
+}
+
+.poison {
+    background: #A95CA0;
+}
+
+.ground {
+    background: #EECC55;
+}
+
+.rock {
+    background: #CCBD72;
+}
+
+.bug {
+    background: #C2D21E;
+}
+
+.ghost {
+    background: #7975D7;
+}
+
+.steel {
+    background: #C4C2DB;
+}
+
+.fire {
+    background: #FA5643;
+}
+
+.water {
+    background: #56ADFF;
+}
+
+.grass {
+    background: #8CD750;
+}
+
+.electric {
+    background: #FDE139;
+}
+
+.psychic {
+    background: #FA65B4;
+}
+
+.ice {
+    background: #96F1FF;
+}
+
+.dragon {
+    background: #8673FF;
+}
+
+.dark {
+    background: #8D6855;
+}
+
+.fairy {
+    background: #F9AEFF;
+}
+
+.normalT {
+    background: rgb(186, 186, 174, 0.8);
+}
+
+.fightingT {
+    background: rgb(167, 85, 67, 0.7);
+}
+
+.flyingT {
+    background: rgb(120, 162, 255, 0.8);
+}
+
+.poisonT {
+    background: rgb(169, 92, 160, 0.8);
+}
+
+.groundT {
+    background: rgb(238, 204, 85, 0.8);
+}
+
+.rockT {
+    background: rgb(204, 189, 114, 0.8);
+}
+
+.bugT {
+    background: rgb(194, 210, 30, 0.8);
+}
+
+.ghostT {
+    background: rgb(121, 117, 215, 0.8);
+}
+
+.steelT {
+    background: rgb(196, 194, 219, 0.8);
+}
+
+.fireT {
+    background: rgb(250, 86, 67, 0.8);
+}
+
+.waterT {
+    background: rgb(87, 174, 255, 0.8);
+}
+
+.grassT {
+    background: rgb(140, 215, 80, 0.8);
+}
+
+.electricT {
+    background: rgb(253, 225, 57, 0.8);
+}
+
+.psychicT {
+    background: rgb(250, 101, 180, 0.8);
+}
+
+.iceT {
+    background: rgb(150, 241, 255, 0.8);
+}
+
+.dragonT {
+    background: rgb(134, 115, 255, 0.8);
+}
+
+.darkT {
+    background: rgb(141, 104, 85, 0.8);
+}
+
+.fairyT {
+    background: rgb(249, 174, 255, 0.8);
 }
