@@ -4,39 +4,39 @@ img{
 body {
     font-family: 'Arima', cursive;
     background-image: url(./assets/pokemonPixelBackground.png);
-    /* text-align: center;
-    justify-content: center; */
 }
 div {
     padding: 1.0rem;
 }
-/* #searchContainer {
-    display: flex;
-    padding: 0 10.0rem 0 10.0rem;
-    justify-content: center;
-    background-color: pink;
-    border: 1.0rem solid black;
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    margin: auto;
-    padding: 10px;
+input[type=text] {
+    width: 20.0rem;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 50px;
 }
-#container {
-    display: flex;
-}
-#pokeInfo {
-    float: left;
-}
-#pokeAbilityBtn {
-    margin: auto;
-    padding: 10px;
-}
-#ability {
-} */
-
+.button {
+    
+    border-radius: 50px;
+    border: 2px solid black;
+    height: 2.0rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    /* background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer; */
+  }
 #titleSearch {   
     text-align: center;
+    border-radius: 50px;
+    border: 10px double black;
 }
 #pokePicName { grid-area: picName; }
 #pokeInfo { grid-area: info; }

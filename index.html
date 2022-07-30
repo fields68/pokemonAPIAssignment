@@ -18,20 +18,20 @@
 
 <body>
     <audio id="pokeAudio">
-        <source src=" ./assets/LakePokémonDiamondPearl.mp3">
+        <source src="./assets/LakePokémonDiamondPearl.mp3">
     </audio>
     <!-- <audio autoplay loop controls>
         <source src="./assets/LakePokémonDiamondPearl.mp3" type="audio/mp3">
     </audio> -->
-    <input id="muteControl" onclick="mute()" type="button" value="Music Mute 🔇">
+    <input id="muteControl" class="button" onclick="mute()" type="button" value="Music Mute 🔇">
     <div id="titleSearch">
         <h1>Pokemon!</h1>
         <h2>Search Pokemon!</h2>
         <form>
             <label for="search">Search Pokemon here:</label>
-            <input type="text" name="search" id="search" placeholder="name or ID">
-            <input onclick="getPokeResults()" type="button" value="🔎">
-            <input onclick="getRandomPokemon()" type="button" value="✨Random Pokemon✨">
+            <input type="text" name="search" id="search" placeholder="Pokemon Name or ID">
+            <input onclick="getPokeResults()" type="button" value="🔎Search🔎" class="button">
+            <input onclick="getRandomPokemon()" type="button" value="✨Random Pokemon✨" class="button">
     </div>
     </form>
     <div id="searchContainer"></div>

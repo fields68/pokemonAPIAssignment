@@ -16,6 +16,7 @@ let typeSlot = "";
 let pType2 = "";
 let cssType2 = "";
 
+const titleDiv = document.getElementById('titleSearch');
 const searchDiv = document.getElementById('searchContainer');
 const pAudio = document.getElementById('pokeAudio')
 
@@ -64,6 +65,7 @@ const getPokeResults = () => {
 
     if (pokeType1 !== "") {
         searchDiv.classList.remove(pokeType1)
+        titleDiv.classList.remove(pokeType1)        
     } else {}
 
     //* gets the information of the pokemon that was searched for by user
@@ -134,6 +136,7 @@ const getRandomPokemon = () => {
 
     if (pokeType1 !== "") {
         searchDiv.classList.remove(pokeType1)
+        titleDiv.classList.remove(pokeType1)  
     } else {}
 
     //* There are two ways to pull up a pokemon 1. By searching for a specific pokemon (function getPokeResults()). 2. The other by randomly picking on by the pokemon ID number (function getRandomPokemon())
@@ -183,17 +186,17 @@ const getRandomPokemon = () => {
     
     // e.preventDefault();
 }
-const classType2 = () => {
+// const classType2 = () => {
     // searchDiv.classList.remove(pokeType1)
     // imgNameDiv.classList.remove(cssType2)
     // pokeDiv.classList.remove(cssType2)
     // abilityButtonDiv.classList.remove(cssType2)
-    imgNameDiv.classList.add(cssType2)
-    pokeDiv.classList.add(cssType2)
-    abilityButtonDiv.classList.add(cssType2)
+    // imgNameDiv.classList.add(cssType2)
+    // pokeDiv.classList.add(cssType2)
+    // abilityButtonDiv.classList.add(cssType2)
     // abilityDiv.classList.add(cssType2)
     
-}
+// }
 const makePokeDiv = (image, name, id, exp, height, weight, type1, divForInfo) => {
 
     //* This if else statement will wipe the previously generated pokemon if there is information in the pokeDiv and generate new information if provided the proper input. 
@@ -247,6 +250,8 @@ const makePokeDiv = (image, name, id, exp, height, weight, type1, divForInfo) =>
     abilityButtonDiv.setAttribute("id", "abilityBtn")
     // abilityDiv.setAttribute("id", "pokeAbility")
     divForInfo.classList.add(pokeType1)
+    titleDiv.classList.add(pokeType1)
+    pokeAbility.classList.add("button")
 
     if (cssType2 !== "") {
         console.log(`cssType2: ${cssType2}`);
