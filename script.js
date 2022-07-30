@@ -17,8 +17,23 @@ let pType2 = "";
 let cssType2 = "";
 
 const searchDiv = document.getElementById('searchContainer');
+const pAudio = document.getElementById('pokeAudio')
 
+pAudio.volume = 0.1;
 
+mute = () => {
+    console.log("mute button works");
+    pAudio.volume = 0;
+    muteControl.value = 'Unmute 🔊';
+    muteControl.onclick = unmute;
+}
+
+unmute = () => {
+    console.log("mute button works");
+    pAudio.volume = 0.1;
+    muteControl.value = 'Mute 🔇';
+    muteControl.onclick = mute;
+}
 
 //* Turns users search value into a string to be manipulated later 
 function mkString(stringInput) {

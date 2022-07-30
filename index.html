@@ -17,9 +17,10 @@
 </head>
 
 <body>
-    <audio controls loop autoplay>
-        <source src="./assets/PokémonSwordShieldGymLeaderBattleMusic.mp3" type="audio/mp3">
+    <audio loop autoplay id="pokeAudio">
+        <source src="./assets/LakePokémonDiamondPearl.mp3" type="audio/mp3">
     </audio>
+    <input id="muteControl" onclick="mute()" type="button" value="Mute 🔇">
     <div id="titleSearch">
         <h1>Pokemon!</h1>
         <h2>Search Pokemon!</h2>
